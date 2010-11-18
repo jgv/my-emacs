@@ -12,18 +12,23 @@
 
 (setq display-time-day-and-date t) (display-time)
 
-(setq scroll-conservatively 10000
-      scroll-step 1) ; smooth scroll
+(setq scroll-conservatively 10000)
+
+(setq scroll-step 1) ; smooth scroll
 
 (setq visible-bell 1)
 
 (setq ring-bell-function 'ignore) ;; no bell
 
-(set-scroll-bar-mode nil) ;; no scrollbar
 
-(menu-bar-mode 1) ;; no menu
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;;(set-scroll-bar-mode -1) ;; no scrollbar
 
-(tool-bar-mode 0) ;; no toolbar
+;;(menu-bar-mode 1) ;; no menu
+
+;;(tool-bar-mode 0) ;; no toolbar
 
 (global-hl-line-mode 1)
 
@@ -40,3 +45,14 @@
 	 			  dired-directory
 				  (revert-buffer-function " %b"
 				  ("%b - Dir:  " default-directory)))))))
+
+;; fix shell
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+;; fullscreen
+(defun maximize-frame () 
+  (interactive)
+  (set-frame-position (selected-frame) 0 0)
+  (set-frame-size (selected-frame) 1000 1000))
+
+(global-set-key (kbd "<S-return>") 'maximize-frame)

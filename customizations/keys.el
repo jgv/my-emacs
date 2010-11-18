@@ -1,3 +1,8 @@
+
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'ctrl)
+
+
 (global-set-key [(meta n)] 'goto-line)
 (global-set-key [(meta s)] 'replace-string) 
 (global-set-key [(meta \1)] 'shell) 
