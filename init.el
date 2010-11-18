@@ -11,7 +11,7 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-(push "/usr/local/bin/git" exec-path)
+(push "/usr/local/bin/" exec-path)
 
 ; handy function to load all elisp files in a directory
 (load-file "~/.emacs.d/load-directory.el")
