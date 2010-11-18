@@ -2,6 +2,12 @@
 (require 'textmate)
 (textmate-mode t)
 
+;;centered-cursor mode
+(load "~/.emacs.d/vendor/centered-cursor-mode.el")
+(and
+      (require 'centered-cursor-mode)
+      (global-centered-cursor-mode +1))
+
 ; Textile
 (require 'textile-minor-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-minor-mode))
