@@ -19,7 +19,7 @@
 
 (setq ring-bell-function 'ignore) ;; no bell
 
-(set-scroll-bar-mode -1) ;; no scrollbar
+(set-scroll-bar-mode nil) ;; no scrollbar
 
 (menu-bar-mode 1) ;; no menu
 
@@ -32,3 +32,11 @@
 (color-theme-clarity)
 
 (set-face-background 'hl-line "#1A1A1A")
+
+;; show full path of file
+(setq-default
+ frame-title-format
+ (list '((buffer-file-name " %f" (dired-directory 
+	 			  dired-directory
+				  (revert-buffer-function " %b"
+				  ("%b - Dir:  " default-directory)))))))

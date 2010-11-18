@@ -1,3 +1,8 @@
+;; find git
+
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin/git")) 
+(setq exec-path (append exec-path '("/usr/local/bin/git")))
+
 ; delete files by moving them to the OS X trash
 (setq delete-by-moving-to-trash t)
 

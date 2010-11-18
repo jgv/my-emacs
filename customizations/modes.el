@@ -2,6 +2,12 @@
 (require 'textmate)
 (textmate-mode t)
 
+; Git
+(require 'magit)
+(autoload 'magit-status "magit" nil t)
+(autoload 'mo-git-blame-file "mo-git-blame" nil t)
+(autoload 'mo-git-blame-current "mo-git-blame" nil t)
+
 ;;centered-cursor mode
 (load "~/.emacs.d/vendor/centered-cursor-mode.el")
 (and
