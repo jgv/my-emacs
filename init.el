@@ -9,3 +9,9 @@
 
 ; load some modes
 (vendor 'color-theme)
+(vendor 'textmate)
+(vendor 'yaml-mode)
+(vendor 'rinari)
+(vendor 'centered-cursor-mode)
+
+(mapcar 'load-directory '("~/.emacs.d/customizations"))
