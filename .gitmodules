@@ -1,0 +1,10 @@
+[submodule "vendor/textmate"]
+	   path = vendor/textmate	
+	   url = git://github.com/defunkt/textmate.el.git
+[submodule "vendor/rinari"]
+	   path = vendor/rinari
+	   url = git://github.com/eschulte/rinari.git
+[submodule "vendor/sass-mode"]
+	   path = vendor/sass-mode
+	   url = git://github.com/nex3/sass-mode.git
+
