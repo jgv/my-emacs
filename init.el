@@ -28,7 +28,7 @@
 ; load some modes
 (vendor 'color-theme)
 (vendor 'textmate)
-(vendor 'textile-mode)
+(vendor 'textile-minor-mode)
 (vendor 'yaml-mode)
 (vendor 'rinari)
 (vendor 'centered-cursor-mode)
