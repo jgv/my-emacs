@@ -33,5 +33,6 @@
 (vendor 'rinari)
 (vendor 'centered-cursor-mode)
 (vendor 'magit)
+(vendor 'rainbow-mode)
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

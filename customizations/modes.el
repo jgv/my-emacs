@@ -47,5 +47,7 @@
 )))
 
 ; html/css
-(autoload 'rainbow-mode "rainbow/rainbow-mode.el" nil t)
-(add-to-list 'auto-mode-alist '("\\.css\\.scss\\.erb\\.html"))
+(require 'rainbow-mode)
+(rainbow-mode t)
+;;(autoload 'rainbow-mode t)
+;;(add-to-list 'auto-mode-alist '("\\.css\\.scss\\.erb\\.html\\'" . rainbow-mode))
