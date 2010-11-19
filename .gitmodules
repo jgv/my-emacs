@@ -10,3 +10,9 @@
 [submodule "vendor/magit"]	
 	   path = vendor/magit		
 	   url = git://gitorious.org/magit/mainline.git
+[submodule "vendor/perspective"]	
+	   path = vendor/perspective		
+	   url = git://github.com/nex3/perspective-el.git
+[submodule "vendor/smart-tab"]	
+	   path = vendor/smart-tab		
+	   url = git://github.com/sroccaserra/smart-tab.git

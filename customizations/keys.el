@@ -8,3 +8,12 @@
 (global-set-key [(meta \1)] 'shell) 
 (global-set-key [(meta \3)] 'desktop-read)
 (global-set-key [(meta \6)] 'grep-find)
+
+(quick-perspective-keys)
+
+
+
+
+
+
+ 

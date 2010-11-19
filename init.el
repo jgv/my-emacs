@@ -34,5 +34,7 @@
 (vendor 'centered-cursor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)
+(vendor 'smart-tab)
+(vendor 'perspective)
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

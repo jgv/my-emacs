@@ -51,3 +51,16 @@
 (rainbow-mode t)
 ;;(autoload 'rainbow-mode t)
 ;;(add-to-list 'auto-mode-alist '("\\.css\\.scss\\.erb\\.html\\'" . rainbow-mode))
+
+
+; perspectives
+(require 'perspective)
+
+
+; smart-tab
+(require 'smart-tab)
+(global-smart-tab-mode 1)
+(setq smart-tab-using-hippie-expand nil)
+(setq smart-tab-completion-functions-alist
+  '((emacs-lisp-mode . lisp-complete-symbol)
+    (text-mode . dabbrev-completion)))
