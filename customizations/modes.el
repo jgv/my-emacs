@@ -15,7 +15,7 @@
       (global-centered-cursor-mode +1))
 
 ; Textile
-(require 'textile-mode)
+(require 'textile-minor-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-minor-mode))
 
 ; YAML
