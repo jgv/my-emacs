@@ -1,5 +1,5 @@
 [submodule "vendor/textmate"]
-	   path = vendor/textmate	
+	   path = vendor/textmate.el	
 	   url = git://github.com/defunkt/textmate.el.git
 [submodule "vendor/rinari"]
 	   path = vendor/rinari
@@ -16,3 +16,6 @@
 [submodule "vendor/smart-tab"]	
 	   path = vendor/smart-tab		
 	   url = git://github.com/sroccaserra/smart-tab.git
+[submodule "vendor/haml-mode"]
+     path = vendor/haml-mode
+     url = git://github.com/nex3/haml-mode.git

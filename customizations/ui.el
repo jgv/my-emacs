@@ -8,7 +8,7 @@
 
 (setq search-highlight t) ;; highlight searches
 
-(setq font-lock-maximum-decoration t)
+;;(setq font-lock-maximum-decoration t)
 
 (setq display-time-day-and-date t) (display-time)
 
