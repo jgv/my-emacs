@@ -1,3 +1,16 @@
+; recent files
+(require 'recentf)
+(setq recentf-max-saved-items 100)
+
+; save cursor position within files
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/.saveplace")
+(setq-default save-place t)
+
+; save minibuffer history across sessions
+(setq savehist-file "~/.emacs.d/.savehist")
+(savehist-mode 1)
+
 ; Interactively Do Things
 (require 'ido)
 (ido-mode t)
@@ -7,3 +20,8 @@
 
 (global-auto-revert-mode 1) ; pick up changes to files on disk automatically (ie, after git pull)
 
+
+; yes, I want to kill buffers with processes attached
+(setq kill-buffer-query-functions
+  (remq 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
