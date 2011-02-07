@@ -28,10 +28,10 @@
 ; load some modes
 (vendor 'color-theme)
 (vendor 'textmate)
-(vendor 'textile-minor-mode)
+(vendor 'centered-cursor-mode)
 (vendor 'yaml-mode)
 (vendor 'rinari)
-(vendor 'centered-cursor-mode)
+(vendor 'textile-minor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)
 (vendor 'smart-tab)

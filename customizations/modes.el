@@ -18,6 +18,11 @@
 (require 'textile-minor-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-minor-mode))
 
+
+; Rails
+(require 'rinari)
+(setq rinari-tags-file-name "TAGS")
+
 ; YAML
 (autoload 'yaml-mode "YAML" nil t)
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
