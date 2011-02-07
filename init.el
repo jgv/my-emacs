@@ -31,6 +31,8 @@
 (vendor 'centered-cursor-mode)
 (vendor 'yaml-mode)
 (vendor 'rinari)
+(vendor 'haml-mode)
+(vendor 'sass-mode)
 (vendor 'textile-minor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)
