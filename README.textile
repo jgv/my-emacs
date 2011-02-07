@@ -1,3 +1,3 @@
 h1. dotfiles
 
-p. My Emacs setup. The configuration is inspired by Alex Payne and David Nolen.
+p. My Emacs setup. As I am still a relative emacs noob, much of this config is derived from the setup of "Alex Payne":http://github.com/al3x and "David Nolen":http://github.com/swannodette.
