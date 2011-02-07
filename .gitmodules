@@ -22,6 +22,3 @@
 [submodule "haml-mode"]
 	   path = vendor/haml-mode
 	   url = git://github.com/nex3/haml-mode.git
-[submodule "git:/github.com/eschulte/rinari.git"]
-	path = git:/github.com/eschulte/rinari.git
-	url = /Users/jgv/.emacs.d/vendor/rinari
