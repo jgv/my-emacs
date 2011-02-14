@@ -7,4 +7,4 @@
       (lambda (url &optional new-window)
         (message url)
         (do-applescript
-         (concat "tell application \"Chrome\" \n activate \n open location \"" url "\" \n end tell"))))
+         (concat "tell application \"Google Chrome\" \n activate \n open location \"" url "\" \n end tell"))))
