@@ -69,3 +69,7 @@
 (setq smart-tab-completion-functions-alist
   '((emacs-lisp-mode . lisp-complete-symbol)
     (text-mode . dabbrev-completion)))
+
+; tweets
+
+(require 'twittering-mode)
