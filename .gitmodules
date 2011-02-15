@@ -22,3 +22,9 @@
 [submodule "haml-mode"]
 	   path = vendor/haml-mode
 	   url = git://github.com/nex3/haml-mode.git
+[submodule "vendor/twittering-mode"]
+     path = vendor/twittering-mode
+	   url = git://github.com/hayamiz/twittering-mode.git
+[submodule "vendor/processing"]
+	path = vendor/processing
+	url = git://github.com/omouse/processing-emacs.git

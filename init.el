@@ -5,7 +5,8 @@
 ;;; This provides support for the package system and
 ;;; interfacing with ELPA, the package archive.
 ;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.                                                                                                                              
+;;; packages in your .emacs.
+                
 (when
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))
@@ -32,11 +33,13 @@
 (vendor 'yaml-mode)
 (vendor 'rinari)
 (vendor 'haml-mode)
+(vendor 'twittering-mode)
 (vendor 'sass-mode)
 (vendor 'textile-minor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)
 (vendor 'smart-tab)
 (vendor 'perspective)
+(vendor 'processing-mode)
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
