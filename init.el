@@ -40,5 +40,6 @@
 (vendor 'rainbow-mode)
 (vendor 'smart-tab)
 (vendor 'perspective)
+(vendor 'processing-mode)
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

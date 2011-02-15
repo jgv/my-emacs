@@ -61,7 +61,6 @@
 ; perspectives
 (require 'perspective)
 
-
 ; smart-tab
 (require 'smart-tab)
 (global-smart-tab-mode 1)
@@ -69,6 +68,12 @@
 (setq smart-tab-completion-functions-alist
   '((emacs-lisp-mode . lisp-complete-symbol)
     (text-mode . dabbrev-completion)))
+
+; processing
+(add-to-list 'load-path "~/.emacs.d/vendor/processing")
+(autoload 'processing-mode "processing-mode" "Processing mode" t)
+(add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
+(setq processing-location "~/.emacs.d/vendor/processing")
 
 ; tweets
 (require 'twittering-mode)
@@ -78,3 +83,4 @@
                                   (nnimap-address "imap.gmail.com")
                                   (nnimap-server-port 993)
                                   (nnimap-stream ssl)))
+
