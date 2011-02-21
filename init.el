@@ -41,5 +41,6 @@
 (vendor 'smart-tab)
 (vendor 'perspective)
 (vendor 'processing-mode)
+(vendor 'mustache)
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

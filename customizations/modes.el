@@ -84,3 +84,6 @@
                                   (nnimap-server-port 993)
                                   (nnimap-stream ssl)))
 
+; mustache
+(add-to-list 'load-path "~/.emacs.d/vendor/mustache-mode.el")
+(require 'mustache)
