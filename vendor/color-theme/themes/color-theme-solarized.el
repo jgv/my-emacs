@@ -1,0 +1,1 @@
+/Users/jgv/Sites/solarized/emacs-color-theme-solarized/color-theme-solarized.el
