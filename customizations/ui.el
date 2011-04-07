@@ -27,11 +27,17 @@
 
 (global-hl-line-mode 1)
 
+(add-to-list 'load-path "~/emacs.d/vendor/color-theme/themes/color-theme-solarized.el")
 (require 'color-theme) ; give it some color
 (color-theme-initialize)
-(color-theme-clarity)
 
-(set-face-background 'hl-line "#1A1A1A")
+;; set the color theme based on time of day
+(if (>  (decimal-number (format-time-string "%H" (current-time))) 19)
+    (color-theme-solarized 'dark)
+  (color-theme-solarized 'light))
+
+
+;;(set-face-background 'hl-line "#1A1A1A")
 
 ;; show full path of file
 (setq-default
@@ -51,3 +57,5 @@
   (set-frame-size (selected-frame) 1000 1000))
 
 (global-set-key (kbd "<S-return>") 'maximize-frame) ;; shift + enter for full screen
+
+(require 'linum)
