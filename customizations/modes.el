@@ -53,10 +53,16 @@
 
 ; html/css
 (require 'rainbow-mode)
-(rainbow-mode t)
-;;(autoload 'rainbow-mode t)
-;;(add-to-list 'auto-mode-alist '("\\.css\\.scss\\.erb\\.html\\'" . rainbow-mode))
+(autoload 'rainbow-mode "rainbow-mode" nil t)
+(setq auto-mode-alist (cons '("\\.scss$" . rainbow-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.css$" . rainbow-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.js$" . rainbow-mode) auto-mode-alist))
 
+; sass
+(require 'sass-mode)
+(autoload 'sass-mode "sass-mode" nil t)
+(setq auto-mode-alist (cons '("\\.scss$" . sass-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.css$" . sass-mode) auto-mode-alist))
 
 ; perspectives
 (require 'perspective)
