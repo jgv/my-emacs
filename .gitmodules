@@ -31,3 +31,6 @@
 [submodule "vendor/rainbow-mode"]
 	path = vendor/rainbow-mode
 	url = git://github.com/emacsmirror/rainbow-mode.git
+[submodule "vendor/solarized"]
+	path = vendor/solarized
+	url = git://github.com/sellout/emacs-color-theme-solarized
