@@ -28,3 +28,6 @@
 [submodule "vendor/processing"]
 	path = vendor/processing
 	url = git://github.com/omouse/processing-emacs.git
+[submodule "vendor/rainbow-mode"]
+	path = vendor/rainbow-mode
+	url = git://github.com/emacsmirror/rainbow-mode.git
