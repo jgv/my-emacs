@@ -36,4 +36,4 @@
 	url = git://github.com/sellout/emacs-color-theme-solarized
 [submodule "vendor/scss-mode"]
 	path = vendor/scss-mode
-	url = git://github.com/antonj/scss-mode.git
+	url = git://github.com/jgv/scss-mode.git
