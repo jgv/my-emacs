@@ -27,7 +27,7 @@
 
 (global-hl-line-mode 1)
 
-(add-to-list 'load-path "~/emacs.d/vendor/solarized/color-theme-solarized.el")
+(add-to-list 'load-path "~/.emacs.d/vendor/solarized/color-theme-solarized.el")
 (require 'color-theme) ; give it some color
 (color-theme-initialize)
 
