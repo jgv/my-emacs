@@ -59,10 +59,9 @@
 (setq auto-mode-alist (cons '("\\.js$" . rainbow-mode) auto-mode-alist))
 
 ; sass
-(require 'sass-mode)
-(autoload 'sass-mode "sass-mode" nil t)
-(setq auto-mode-alist (cons '("\\.scss$" . sass-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.css$" . sass-mode) auto-mode-alist))
+(require 'scss-mode)
+(autoload 'scss-mode "scss-mode" nil t)
+(setq auto-mode-alist (cons '("\\.scss$" . scss-mode) auto-mode-alist))
 
 ; perspectives
 (require 'perspective)

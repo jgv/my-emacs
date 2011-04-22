@@ -34,7 +34,7 @@
 (vendor 'rinari)
 (vendor 'haml-mode)
 (vendor 'twittering-mode)
-(vendor 'sass-mode)
+(vendor 'scss-mode)
 (vendor 'textile-minor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)

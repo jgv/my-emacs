@@ -26,4 +26,4 @@
 (global-visual-line-mode 1)
 
 ; recognize camelCase as a word boundary
-(c-subword-mode 1)
+(subword-mode 1)
