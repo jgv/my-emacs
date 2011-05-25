@@ -20,6 +20,8 @@
 
 (setq ring-bell-function 'ignore) ;; no bell
 
+(set-face-attribute 'default nil :font "Inconsolata-14")
+
 ;; no scrollbar, toolbar, menu
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
