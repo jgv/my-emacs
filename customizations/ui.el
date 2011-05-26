@@ -20,7 +20,7 @@
 
 (setq ring-bell-function 'ignore) ;; no bell
 
-(set-face-attribute 'default nil :font "Inconsolata-dz-14")
+(set-face-attribute 'default nil :font "Inconsolata-dz-12")
 
 ;; no scrollbar, toolbar, menu
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
