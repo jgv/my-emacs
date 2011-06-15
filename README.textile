@@ -1,3 +1,14 @@
 h1. ˈiːmæks
 
 p. My Emacs setup. As I am still a relative emacs noob, much of this config is derived from the setup of "Alex Payne":http://github.com/al3x and "David Nolen":http://github.com/swannodette.
+
+h2. Notes
+
+* I've mapped my caps lock key to function as a control key. Things are way more comfy if you make that switch.
+* Emacs will pick the color theme based on time of day. Right now alternating between dark/light Solarized themes.
+* scss-mode is hardcoded to compile with the @--compressed@ flag on save. To change this you'll have to alter @vendor/scss-mode@.
+* Don't forget to byte compile j2-mode on your own machine @emacs --batch --eval '(byte-compile-file "~/.emacs.d/vendor/js2/js2.el")'@
+
+h2. Why?
+
+p. @https://jgv@github.com/jgv/my-emacs.git@ and I'm home.
