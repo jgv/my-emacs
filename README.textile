@@ -11,4 +11,4 @@ h2. Notes
 
 h2. Why?
 
-p. @https://jgv@github.com/jgv/my-emacs.git@ and I'm home.
+p. <code>https://jgv@github.com/jgv/my-emacs.git</code> and I'm home.
