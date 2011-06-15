@@ -19,6 +19,7 @@
 
 ; passwords!
 (load-file "~/.emacs.d/passwords.el")
+
 ; directories for the load path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/customizations")
@@ -43,7 +44,6 @@
 (vendor 'smart-tab)
 (vendor 'perspective)
 (vendor 'processing-mode)
-(vendor 'jabber)
 (vendor 'simplenote)
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

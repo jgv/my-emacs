@@ -28,11 +28,6 @@
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
-; JavaScript
-(autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
-
 ; nxhtml for (html/erb)
 (load "~/.emacs.d/vendor/nxhtml/autostart.el")
 (setq
@@ -51,12 +46,19 @@
        '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "#000000"))))
 )))
 
-; html/css
+; rainbow mode
 (require 'rainbow-mode)
 (autoload 'rainbow-mode "rainbow-mode" nil t)
 (setq auto-mode-alist (cons '("\\.scss$" . rainbow-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.css$" . rainbow-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.js$" . rainbow-mode) auto-mode-alist))
+
+; JavaScript
+(load "~/.emacs.d/vendor/js2/js2.elc")
+(require 'js2-mode)
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
 
 ; sass
 (require 'scss-mode)
