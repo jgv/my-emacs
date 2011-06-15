@@ -9,3 +9,4 @@
 .saveplace
 *.elc
 passwords.el
+customizations/jabber.el

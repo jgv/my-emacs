@@ -83,12 +83,7 @@
 ; tweets
 (require 'twittering-mode)
 
-; gmail
-(add-to-list 'gnus-secondary-select-methods '(nnimap "gmail"
-                                  (nnimap-address "imap.gmail.com")
-                                  (nnimap-server-port 993)
-                                  (nnimap-stream ssl)))
-
-; mustache
-(add-to-list 'load-path "~/.emacs.d/vendor/mustache-mode.el")
-(require 'mustache)
+; simplenote
+(require 'simplenote)
+(setq simplenote-email "jvingiano@gmail.com")
+(simplenote-setup)

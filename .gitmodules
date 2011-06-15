@@ -19,9 +19,6 @@
 [submodule "vendor/haml-mode"]
      path = vendor/haml-mode
      url = git://github.com/nex3/haml-mode.git
-[submodule "haml-mode"]
-	   path = vendor/haml-mode
-	   url = git://github.com/nex3/haml-mode.git
 [submodule "vendor/twittering-mode"]
      path = vendor/twittering-mode
 	   url = git://github.com/hayamiz/twittering-mode.git
@@ -34,9 +31,6 @@
 [submodule "vendor/solarized"]
 	path = vendor/solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized
-[submodule "scss-mode"]
-	path = scss-mode
-	url = git://github.com/jgv/scss-mode.git
 [submodule "vendor/scss-mode"]
 	path = vendor/scss-mode
 	url = git://github.com/jgv/scss-mode.git
