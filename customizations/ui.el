@@ -27,7 +27,7 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-(global-hl-line-mode 1)
+(global-hl-line-mode 0)
 
 (add-to-list 'load-path "~/.emacs.d/vendor/solarized/color-theme-solarized.el")
 (require 'color-theme) ; give it some color

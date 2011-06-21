@@ -46,4 +46,5 @@
 (vendor 'processing-mode)
 (vendor 'simplenote)
 
+
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
