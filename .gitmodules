@@ -34,3 +34,6 @@
 [submodule "vendor/scss-mode"]
 	path = vendor/scss-mode
 	url = git://github.com/jgv/scss-mode.git
+[submodule "vendor/rvm"]
+	path = vendor/rvm
+	url = git://github.com/senny/rvm.el.git

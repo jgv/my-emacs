@@ -41,6 +41,7 @@
 (vendor 'textile-minor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)
+(vendor 'rvm)
 (vendor 'smart-tab)
 (vendor 'perspective)
 (vendor 'processing-mode)

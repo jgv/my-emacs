@@ -10,9 +10,8 @@
 
 ;;centered-cursor mode
 (load "~/.emacs.d/vendor/centered-cursor-mode.el")
-(and
-      (require 'centered-cursor-mode)
-      (global-centered-cursor-mode +1))
+(and (require 'centered-cursor-mode)
+     (global-centered-cursor-mode +1))
 
 ; Textile
 (require 'textile-minor-mode)
@@ -22,6 +21,21 @@
 ; Rails
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
+(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
+
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle 'overlay)
+
+(autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
+(autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
+
+
+(require 'rvm)
+(rvm-use-default)
 
 ; YAML
 (autoload 'yaml-mode "YAML" nil t)
@@ -38,26 +52,20 @@
   rng-nxml-auto-validate-flag nil
   nxml-degraded t)
 
-(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
-(eval-after-load 'nxhtml
-  '(eval-after-load 'color-theme
-     (custom-set-faces
-       '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) (:background "#000000"))))
-       '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "#000000"))))
-)))
+(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo-mode))
 
 ; rainbow mode
 (require 'rainbow-mode)
 (autoload 'rainbow-mode "rainbow-mode" nil t)
+(setq auto-mode-alist (cons '("\\.css\\.scss$" . rainbow-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.scss$" . rainbow-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.css$" . rainbow-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.js$" . rainbow-mode) auto-mode-alist))
 
 ; JavaScript
 
 (autoload 'js-mode "js-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
-
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 
 ; sass
 (require 'scss-mode)
