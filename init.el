@@ -37,7 +37,7 @@
 (vendor 'rinari)
 (vendor 'haml-mode)
 (vendor 'twittering-mode)
-(vendor 'scss-mode)
+;(vendor 'scss-mode)
 (vendor 'textile-minor-mode)
 (vendor 'magit)
 (vendor 'rainbow-mode)
@@ -46,6 +46,7 @@
 (vendor 'perspective)
 (vendor 'processing-mode)
 (vendor 'simplenote)
+(vendor 'coffee-mode)
 
 
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

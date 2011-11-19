@@ -37,3 +37,6 @@
 [submodule "vendor/rvm"]
 	path = vendor/rvm
 	url = git://github.com/senny/rvm.el.git
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
