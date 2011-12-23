@@ -27,3 +27,6 @@
 
 ; recognize camelCase as a word boundary
 (subword-mode 1)
+
+; flymake mode
+(add-hook 'find-file-hook 'flymake-find-file-hook)
