@@ -81,6 +81,9 @@
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
 
+; ejs
+(add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
+
 ; sass
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode" nil t)
