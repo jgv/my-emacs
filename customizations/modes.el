@@ -1,9 +1,3 @@
-;;(require 'textmate)
-;;(textmate-mode t)
-
-;;(require 'centered-cursor-mode)
-;;(global-centered-cursor-mode +1)
-
 ;; js, json, ejs, coffee
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
@@ -62,3 +56,12 @@
   (autoload 'textile-mode "coffee-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
   (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode)))
+
+(defun magit-hook ()
+  (global-set-key (kbd "C-x C-z") 'magit-status))
+
+(defun centered-cursor-hook ()
+  (global-centered-cursor-mode +1))
+
+(defun textmate-hook ()
+  (textmate-mode t))

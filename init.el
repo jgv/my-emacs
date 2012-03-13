@@ -12,8 +12,10 @@
 (load-file "~/.emacs.d/load-directory.el")
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/utils")
+(add-to-list 'load-path "~/.emacs.d/themes")
 
 (mapcar 'load-directory '("~/.emacs.d/utils"))
+(mapcar 'load-directory '("~/.emacs.d/themes"))
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
 
 (unless (require 'el-get nil t) 

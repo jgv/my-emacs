@@ -30,3 +30,5 @@
 	 			  dired-directory
 				  (revert-buffer-function " %b"
 				  ("%b - Dir:  " default-directory)))))))
+
+(load-theme 'zenburn t)

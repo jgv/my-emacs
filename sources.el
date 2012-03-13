@@ -11,14 +11,17 @@
         (:name textmate
                :type git
                :url "git://github.com/defunkt/textmate.el"
-               :load "textmate.el")
+               :load "textmate.el"
+               :after (lambda () (textmate-hook)))
+        (:name magit 
+               :after (lambda () (magit-hook)))
         (:name rvm
                :type git
                :url "git://github.com/djwhitt/rvm.el.git"
                :load "rvm.el"
                :compile ("rvm.el")
                :after (lambda() (rvm-use-default)))
-        (:name yaml-mode 
+        (:name yaml-mode
                :type git
                :url "git://github.com/yoshiki/yaml-mode.git"
                :features yaml-mode
@@ -31,7 +34,8 @@
         (:name centered-cursor-mode
                :type git
                :url "git://github.com/emacsmirror/centered-cursor-mode.git"
-               :load "centered-cursor-mode.el")
+               :load "centered-cursor-mode.el"
+               :after (lambda () (centered-cursor-hook)))
         (:name rainbow-mode
                :type git
                :url "git://github.com/emacsmirror/rainbow-mode.git"
@@ -46,12 +50,12 @@
                :type git
                :url "git://github.com/emacsmirror/textile-mode.git"
                :features textile-mode
-               :load (lambda () (textile-mode-hook)))
+               :after (lambda () (textile-mode-hook)))
         (:name coffee-mode
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"
                :features coffee-mode
-               :load (lambda () (coffee-mode-hook)))))
+               :after (lambda () (coffee-mode-hook)))))
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))
