@@ -1,5 +1,3 @@
-; tabs and indentation
-(setq standard-indent 2)
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
@@ -30,3 +28,10 @@
 
 ; flymake mode
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+(set-fringe-style -1)
+
+(tooltip-mode -1)
+
+; y/n
+(fset 'yes-or-no-p 'y-or-n-p)

@@ -20,9 +20,7 @@
 
 (global-auto-revert-mode 1) ; pick up changes to files on disk automatically (ie, after git pull)
 
-
 ; yes, I want to kill buffers with processes attached
 (setq kill-buffer-query-functions
   (remq 'process-kill-buffer-query-function
          kill-buffer-query-functions))
-

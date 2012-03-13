@@ -1,8 +1,7 @@
-
 ; delete files by moving them to the OS X trash                                                                                                                          
 (setq delete-by-moving-to-trash t)
 
-;; open URLs in Safari                                                                                                                                                   
+;; open URLs in Chrome                                           
 (setq browse-url-browser-function
       (lambda (url &optional new-window)
         (message url)

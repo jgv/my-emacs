@@ -1,12 +1,3 @@
-.DS_Store
+el-get
+auto-save-list
 *~
-.#*#
-#*#
-#*
-.#*
-.emacs-opened-files
-.savehist
-.saveplace
-*.elc
-passwords.el
-customizations/jabber.el

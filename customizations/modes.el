@@ -1,115 +1,64 @@
-; TextMate
-(require 'textmate)
-(textmate-mode t)
+;;(require 'textmate)
+;;(textmate-mode t)
 
-; Git
-(require 'magit)
-(autoload 'magit-status "magit" nil t)
-(autoload 'mo-git-blame-file "mo-git-blame" nil t)
-(autoload 'mo-git-blame-current "mo-git-blame" nil t)
+;;(require 'centered-cursor-mode)
+;;(global-centered-cursor-mode +1)
 
-;;centered-cursor mode
-(load "~/.emacs.d/vendor/centered-cursor-mode.el")
-(and (require 'centered-cursor-mode)
-     (global-centered-cursor-mode +1))
-
-; Textile
-(require 'textile-minor-mode)
-(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-minor-mode))
-
-
-; Rails
-(require 'rinari)
-(setq rinari-tags-file-name "TAGS")
-(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
-
-(load "~/.emacs.d/vendor/ruby-block.el")
-(require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle 'overlay)
-
-(autoload 'ruby-mode "ruby-mode" "Mode for editing ruby source files" t)
-(autoload 'run-ruby "inf-ruby" "Run an inferior Ruby process")
-(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-(setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
-
-
-(require 'rvm)
-(rvm-use-default)
-
-; YAML
-(autoload 'yaml-mode "YAML" nil t)
-(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-
-; nxhtml for (html/erb)
-(load "~/.emacs.d/vendor/nxhtml/autostart.el")
-(setq
-  nxhtml-global-minor-mode t
-  mumamo-chunk-coloring 'submode-colored
-  nxhtml-skip-welcome t
-  indent-region-mode t
-  rng-nxml-auto-validate-flag nil
-  nxml-degraded t)
-
-(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo-mode))
-
-; rainbow mode
-(require 'rainbow-mode)
-(autoload 'rainbow-mode "rainbow-mode" nil t)
-(setq auto-mode-alist (cons '("\\.css\\.scss$" . rainbow-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.scss$" . rainbow-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.css$" . rainbow-mode) auto-mode-alist))
-
-; JavaScript
-
-(autoload 'js-mode "js-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
+;; js, json, ejs, coffee
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
-(setq js-indent-level 2)
-
-; coffee-script
-(require 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-
-(defun coffee-custom ()
-  "coffee-mode-hook"
- (set (make-local-variable 'tab-width) 2))
-
-(add-hook 'coffee-mode-hook
-  '(lambda() (coffee-custom)))
-
-; ejs
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
 
-; sass
-(require 'scss-mode)
-(autoload 'scss-mode "scss-mode" nil t)
-(setq auto-mode-alist (cons '("\\.scss$" . scss-mode) auto-mode-alist))
+;; hooks
 
-; perspectives
-(require 'perspective)
+(defun ruby-mode-hook ()
+  (autoload 'ruby-mode "ruby-mode" nil t)
+  (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.rb\\'" . ruby-mode))
+  (add-to-list 'auto-mode-alist '("\\.ru\\'" . ruby-mode))
+  (add-hook 'ruby-mode-hook '(lambda ()
+                               (setq ruby-deep-arglist t)
+                               (setq ruby-deep-indent-paren nil)
+                               (setq c-tab-always-indent nil)
+                               (require 'inf-ruby)
+                               (require 'ruby-compilation))))
 
-; smart-tab
-(require 'smart-tab)
-(global-smart-tab-mode 1)
-(setq smart-tab-using-hippie-expand nil)
-(setq smart-tab-completion-functions-alist
-  '((emacs-lisp-mode . lisp-complete-symbol)
-    (text-mode . dabbrev-completion)))
+(defun yaml-mode-hook ()
+  (autoload 'yaml-mode "yaml-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode)))
 
-; processing
-(add-to-list 'load-path "~/.emacs.d/vendor/processing")
-(autoload 'processing-mode "processing-mode" "Processing mode" t)
-(add-to-list 'auto-mode-alist '("\\.pde$" . processing-mode))
-(setq processing-location "~/.emacs.d/vendor/processing")
+(defun css-mode-hook ()
+  (autoload 'css-mode "css-mode" nil t)
+  (add-hook 'css-mode-hook '(lambda ()
+                              (setq css-indent-level 2)
+                              (setq css-indent-offset 2))))
 
-; tweets
-(require 'twittering-mode)
+(defun rhtml-mode-hook ()
+  (autoload 'rhtml-mode "rhtml-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
+  (add-hook 'rhtml-mode '(lambda ()
+                           (define-key rhtml-mode-map (kbd "M-s") 'save-buffer))))
 
-; simplenote
-(require 'simplenote)
-(setq simplenote-email "jvingiano@gmail.com")
-(simplenote-setup)
+(defun smart-tab-hook ()
+  (global-smart-tab-mode 1)
+  (setq smart-tab-using-hippie-expand t)
+  (setq smart-tab-completion-functions-alist
+        '((emacs-lisp-mode . lisp-complete-symbol)
+          (text-mode . dabbrev-completion))))
+
+(defun rainbow-mode-hook ()
+  (autoload 'rainbow-mode "rainbow-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.scss\\'" . rainbow-mode))
+  (add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode)))
+
+(defun textile-mode-hook ()
+  (autoload 'textile-mode "textile-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode)))
+  
+(defun coffee-mode-hook ()
+  (autoload 'textile-mode "coffee-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+  (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode)))

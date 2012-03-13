@@ -8,12 +8,6 @@
 
 (setq search-highlight t) ;; highlight searches
 
-;;(setq font-lock-maximum-decoration t)
-
-(setq display-time-day-and-date t) (display-time)
-
-(setq scroll-conservatively 10000)
-
 (setq scroll-step 1) ; smooth scroll
 
 (setq visible-bell 1)
@@ -29,18 +23,6 @@
 
 (global-hl-line-mode 0)
 
-(add-to-list 'load-path "~/.emacs.d/vendor/solarized/color-theme-solarized.el")
-(require 'color-theme) ; give it some color
-(color-theme-initialize)
-
-;; set the color theme based on time of day
-(if (>  (decimal-number (format-time-string "%H" (current-time))) 19)
-    (color-theme-solarized 'dark)
-  (color-theme-solarized 'light))
-
-
-;;(set-face-background 'hl-line "#1A1A1A")
-
 ;; show full path of file
 (setq-default
  frame-title-format
@@ -48,14 +30,3 @@
 	 			  dired-directory
 				  (revert-buffer-function " %b"
 				  ("%b - Dir:  " default-directory)))))))
-
-;; fix shell
-(add-hook 'shell 'ansi-color-for-comint-mode-on)
-
-;; fullscreen
-(defun maximize-frame () 
-  (interactive)
-  (set-frame-position (selected-frame) 0 0)
-  (set-frame-size (selected-frame) 1000 1000))
-
-(global-set-key (kbd "<S-return>") 'maximize-frame) ;; shift + enter for full screen
