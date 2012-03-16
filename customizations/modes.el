@@ -1,4 +1,4 @@
-;; js, json, ejs, coffee
+;; json, ejs
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
 

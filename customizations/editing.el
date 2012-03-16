@@ -26,12 +26,13 @@
 ; recognize camelCase as a word boundary
 (subword-mode 1)
 
-; flymake mode
-(add-hook 'find-file-hook 'flymake-find-file-hook)
-
 (set-fringe-style -1)
 
 (tooltip-mode -1)
 
 ; y/n
 (fset 'yes-or-no-p 'y-or-n-p)
+
+; backups
+
+(setq backup-directory-alist `(("." . "~/.emacs.d/.backups")))
