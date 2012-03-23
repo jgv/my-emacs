@@ -1,1 +1,9 @@
 h1. ˈiːmæks
+
+p. This is what I use to edit files on my computer. 
+
+<hr>
+
+h4. Here's a comic:
+
+!http://imgs.xkcd.com/comics/real_programmers.png!
