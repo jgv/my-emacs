@@ -55,7 +55,12 @@
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"
                :features coffee-mode
-               :after (lambda () (coffee-mode-hook)))))
+               :after (lambda () (coffee-mode-hook)))
+        (:name yasnippet
+               :type git
+               :url "git://github.com/capitaomorte/yasnippet.git"
+               :features yasnippet
+               :after (lambda () (yasnippet-hook)))))
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))

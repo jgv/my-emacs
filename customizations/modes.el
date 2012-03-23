@@ -65,3 +65,7 @@
 
 (defun textmate-hook ()
   (textmate-mode t))
+
+(defun yasnippet-hook ()
+  (yas/global-mode 1)) 
+
