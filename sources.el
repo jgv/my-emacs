@@ -5,6 +5,11 @@
                :after (lambda () (ruby-mode-hook)))
         (:name inf-ruby :type elpa)
         (:name ruby-compilation :type elpa)
+        (:name php-mode 
+               :type git
+               :url "git://github.com/ejmr/php-mode.git"
+               :features php-mode
+               :after (lambda () (php-mode-hook)))
         (:name css-mode 
                :type elpa
                :after (lambda () (css-mode-hook)))
@@ -51,6 +56,11 @@
                :url "git://github.com/emacsmirror/textile-mode.git"
                :features textile-mode
                :after (lambda () (textile-mode-hook)))
+        (:name markdown-mode
+               :type git
+               :url "git://jblevins.org/git/markdown-mode.git"
+               :features markdown-mode
+               :after (lambda () (markdown-mode-hook)))
         (:name coffee-mode
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"

@@ -25,6 +25,10 @@
   (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
   (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode)))
 
+(defun php-mode-hook ()
+  (autoload 'css-mode "php-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.php$" . php-mode)))
+
 (defun css-mode-hook ()
   (autoload 'css-mode "css-mode" nil t)
   (add-hook 'css-mode-hook '(lambda ()
@@ -52,6 +56,10 @@
 (defun textile-mode-hook ()
   (autoload 'textile-mode "textile-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode)))
+
+(defun markdown-mode-hook ()
+  (autoload 'textile-mode "markdown-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode)))
   
 (defun coffee-mode-hook ()
   (autoload 'textile-mode "coffee-mode" nil t)
