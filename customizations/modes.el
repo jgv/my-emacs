@@ -2,6 +2,8 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
 
+(setq js-indent-level 2)
+
 ;; hooks
 
 (defun ruby-mode-hook ()
