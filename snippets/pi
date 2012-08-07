@@ -1,0 +1,3 @@
+#name: parseInt
+# --
+parseInt($0,${1:radix})

@@ -1,0 +1,5 @@
+#name: each
+# --
+_(${1:coll}).each(function(${2:args}) {
+  $0
+});
