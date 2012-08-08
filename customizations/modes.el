@@ -34,7 +34,7 @@
 (defun css-mode-hook ()
   (autoload 'css-mode "css-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.scss\\'" . rainbow-mode))
-  (add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode)))
+  (add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode))
   (add-hook 'css-mode-hook '(lambda ()
                               (setq css-indent-level 2)
                               (setq css-indent-offset 2))))

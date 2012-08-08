@@ -18,10 +18,10 @@
 (mapcar 'load-directory '("~/.emacs.d/themes"))
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
 
-(unless (require 'el-get nil t) 
+(unless (require 'el-get nil t)
   (url-retrieve "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
-                (lambda (s) 
-                  (end-of-buffer) 
+                (lambda (s)
+                  (end-of-buffer)
                   (eval-print-last-sexp))))
 
 (require 'el-get)
