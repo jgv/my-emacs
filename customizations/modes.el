@@ -54,6 +54,7 @@
 
 (defun rainbow-mode-hook ()
   (autoload 'rainbow-mode "rainbow-mode" nil t)
+  (autoload 'rainbow-mode "css-mode" nil t)
   (add-to-list 'auto-mode-alist '("\\.scss\\'" . rainbow-mode))
   (add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode)))
 
@@ -84,3 +85,9 @@
   (setq yas/snippet-dir "~/.emacs.d/customizations/snippets")
   (yas/global-mode 1))
 
+(defun io-mode-inf-hook ()
+  (require 'io-mode-inf))
+
+(defun io-mode-hook ()
+  (require 'io-mode)
+  (add-to-list 'auto-mode-alist '("\\.io\\'" . io-mode)))

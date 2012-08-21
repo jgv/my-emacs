@@ -70,7 +70,17 @@
                :type git
                :url "git://github.com/capitaomorte/yasnippet.git"
                :features yasnippet
-               :after (lambda () (yasnippet-hook)))))
+               :after (lambda () (yasnippet-hook)))
+        (:name io-mode
+               :type git
+               :url "git://github.com/superbobry/io-mode.git"
+               :features io-mode
+               :after (lambda () (io-mode-hook)))
+        (:name io-moode-inf
+               :type git
+               :url "git://github.com/slackorama/io-emacs.git"
+               :features io-mode-inf
+               :after (lambda () (io-mode-inf-hook)))))
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))
