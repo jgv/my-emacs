@@ -31,4 +31,4 @@
 				  (revert-buffer-function " %b"
 				  ("%b - Dir:  " default-directory)))))))
 
-(load-theme 'zenburn t)
+(load-theme 'tomorrow-night-eighties t)
