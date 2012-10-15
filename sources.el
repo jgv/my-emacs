@@ -80,7 +80,9 @@
                :type git
                :url "git://github.com/slackorama/io-emacs.git"
                :features io-mode-inf
-               :after (lambda () (io-mode-inf-hook)))))
+               :after (lambda () (io-mode-inf-hook)))
+        (:name ethan-wspace
+               :after (lambda () (global-ethan-wspace-mode 1)))))
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))
