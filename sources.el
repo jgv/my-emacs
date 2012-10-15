@@ -82,7 +82,11 @@
                :features io-mode-inf
                :after (lambda () (io-mode-inf-hook)))
         (:name ethan-wspace
-               :after (lambda () (global-ethan-wspace-mode 1)))))
+               :after (lambda () (global-ethan-wspace-mode 1)))
+        (:name js-comint
+               :type git
+               :url "git://github.com/user-1/js-comint.git"
+               :after (lambda () (js-comint-hook)))))
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))
