@@ -86,7 +86,19 @@
         (:name js-comint
                :type git
                :url "git://github.com/user-1/js-comint.git"
-               :after (lambda () (js-comint-hook)))))
+               :after (lambda () (js-comint-hook)))
+        (:name tree-mode ;; dependency of dir-tree
+               :type git
+               :url "git://github.com/emacsmirror/tree-mode.git"
+               :after (lambda() (require 'tree-mode)))
+        (:name windata
+               :type git
+               :url "git://github.com/emacsmirror/windata.git"
+               :after (lambda() (require 'windata)))
+        (:name dir-tree
+               :type git
+               :url "git://github.com/zkim/emacs-dirtree.git"
+               :after (lambda () (require 'dirtree)))))
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))
