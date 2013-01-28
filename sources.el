@@ -1,24 +1,29 @@
 (setq el-get-sources
-      '((:name ruby-mode 
+      '((:name ruby-mode
                :type elpa
                :load "ruby-mode.el"
                :after (progn (ruby-mode-hook)))
         (:name inf-ruby :type elpa)
         (:name ruby-compilation :type elpa)
-        (:name php-mode 
+        (:name php-mode
                :type git
                :url "git://github.com/ejmr/php-mode.git"
                :features php-mode
                :after (progn (php-mode-hook)))
-        (:name css-mode 
+        (:name css-mode
                :type elpa
                :after (progn (css-mode-hook)))
+        (:name scss-mode
+               :type git
+               :url "git://github.com/antonj/scss-mode.git"
+               :features scss-mode
+               :after (progn (scss-mode-hook)))
         (:name textmate
                :type git
                :url "git://github.com/defunkt/textmate.el"
                :load "textmate.el"
                :after (progn (textmate-hook)))
-        (:name magit 
+        (:name magit
                :after (progn (magit-hook)))
         (:name yaml-mode
                :type git

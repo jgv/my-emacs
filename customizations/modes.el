@@ -32,12 +32,15 @@
   (add-to-list 'auto-mode-alist '("\\.php$" . php-mode)))
 
 (defun css-mode-hook ()
-  (autoload 'css-mode "css-mode" nil t)
-  (add-to-list 'auto-mode-alist '("\\.scss\\'" . rainbow-mode))
-  (add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode))
+  (autoload 'css-mode "css-mode")
+  (add-to-list 'auto-mode-alist '("\\.css\\'"))
   (add-hook 'css-mode-hook '(lambda ()
                               (setq css-indent-level 2)
                               (setq css-indent-offset 2))))
+
+(defun scss-mode-hook ()
+  (autoload 'scss-mode "scss-mode")
+  (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode)))
 
 (defun rhtml-mode-hook ()
   (autoload 'rhtml-mode "rhtml-mode" nil t)
@@ -53,10 +56,7 @@
           (text-mode . dabbrev-completion))))
 
 (defun rainbow-mode-hook ()
-  (autoload 'rainbow-mode "rainbow-mode" nil t)
-  (autoload 'rainbow-mode "css-mode" nil t)
-  (add-to-list 'auto-mode-alist '("\\.scss\\'" . rainbow-mode))
-  (add-to-list 'auto-mode-alist '("\\.css\\'" . rainbow-mode)))
+  (autoload 'rainbow-mode "rainbow-mode" nil t))
 
 (defun textile-mode-hook ()
   (autoload 'textile-mode "textile-mode" nil t)
