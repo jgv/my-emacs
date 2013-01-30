@@ -16,7 +16,6 @@
         (:name scss-mode
                :type git
                :url "git://github.com/antonj/scss-mode.git"
-               :features scss-mode
                :after (progn (scss-mode-hook)))
         (:name textmate
                :type git
