@@ -1,7 +1,7 @@
 ;; json, ejs, cljs
 (add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
-(add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 
 (setq js-indent-level 2)
 
