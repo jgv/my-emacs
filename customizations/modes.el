@@ -106,3 +106,11 @@
                        (lambda (output)
                          (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
                                                    (replace-regexp-in-string ".*1G.*3G" "> " output)))))))
+
+(defun web-mode-hook ()
+  (require 'web-mode)
+
+  (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode)))

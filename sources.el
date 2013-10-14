@@ -96,7 +96,12 @@
         (:name dir-tree
                :type git
                :url "git://github.com/zkim/emacs-dirtree.git"
-               :after (progn (require 'dirtree)))))
+               :after (progn (require 'dirtree)))
+        (:name web-mode
+               :type git
+               :url "git://github.com/fxbois/web-mode.git"
+               :after (progn (web-mode-hook)))))
+
 
 (setq my-packages
       (append '(el-get) (mapcar 'el-get-source-name el-get-sources)))
