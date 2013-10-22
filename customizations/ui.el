@@ -1,19 +1,27 @@
-(setq inhibit-startup-message t) ; no startup message
+; no startup message
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message t
+      inhibit-startup-screen t)
 
-(set-variable 'truncate-lines t) ; truncate whitespace
+; truncate whitespace
+(set-variable 'truncate-lines t)
 
-(transient-mark-mode 1) 
+;; region highlighting etc
+(transient-mark-mode 1)
 
-(setq query-replace-highlight t) ;; highlight in search and replace
+;; highlight in search and replace
+(setq query-replace-highlight t)
 
-(setq search-highlight t) ;; highlight searches
+;; highlight searches
+(setq search-highlight t)
 
-(setq scroll-step 1) ; smooth scroll
+; smooth scroll
+(setq scroll-step 1)
 
-(setq visible-bell 1)
+;; no bell at all ever
+(setq ring-bell-function 'ignore)
 
-(setq ring-bell-function 'ignore) ;; no bell
-
+;; use inconsolata
 (set-face-attribute 'default nil :font "Inconsolata-dz-12")
 
 ;; no scrollbar, toolbar, menu
@@ -21,14 +29,14 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+;; highlight current line
 (global-hl-line-mode 0)
 
 ;; show full path of file
 (setq-default
  frame-title-format
- (list '((buffer-file-name " %f" (dired-directory 
-	 			  dired-directory
-				  (revert-buffer-function " %b"
-				  ("%b - Dir:  " default-directory)))))))
+ (list '((buffer-file-name " %f" (dired-directory
+          dired-directory
+          (revert-buffer-function " %b"
+          ("%b - Dir:  " default-directory)))))))
 
-(load-theme 'tomorrow-night-eighties t)

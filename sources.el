@@ -4,6 +4,7 @@
                :load "ruby-mode.el"
                :after (progn (ruby-mode-hook)))
         (:name inf-ruby :type elpa)
+        (:name color-theme :type elpa)
         (:name ruby-compilation :type elpa)
         (:name php-mode
                :type git

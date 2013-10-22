@@ -18,7 +18,8 @@
 (add-to-list 'ido-ignore-files "\\.DS_Store")
 (setq ido-create-new-buffer 'always) ; always create a new buffer with Ido
 
-(global-auto-revert-mode 1) ; pick up changes to files on disk automatically (ie, after git pull)
+; pick up changes to files on disk automatically (ie, after git pull)
+(global-auto-revert-mode 1)
 
 ; yes, I want to kill buffers with processes attached
 (setq kill-buffer-query-functions

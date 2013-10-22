@@ -3,10 +3,10 @@
 (add-to-list 'auto-mode-alist '("\\.ejs$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 
+;; indent 2 spaces in js?
 (setq js-indent-level 2)
 
 ;; hooks
-
 (defun ruby-mode-hook ()
   (autoload 'ruby-mode "ruby-mode" nil t)
   (add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
@@ -41,6 +41,7 @@
 
 (defun scss-mode-hook ()
   (autoload 'scss-mode "scss-mode")
+  ; dont compile every time you save a scss file
   (setq-default scss-compile-at-save nil)
   (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode)))
 

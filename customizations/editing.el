@@ -1,12 +1,14 @@
-(setq-default tab-width 2)
-(setq-default indent-tabs-mode nil)
-
 ; encoding
 (prefer-coding-system 'utf-8)
 (set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
+
+; tab width
+(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil)
 
 ; show column number in bar
 (column-number-mode t)
@@ -24,15 +26,16 @@
 (global-visual-line-mode 1)
 
 ; recognize camelCase as a word boundary
-(subword-mode 1)
+(global-subword-mode 1)
 
-(set-fringe-style -1)
+;; no border chrome
+(set-fringe-style 0)
 
+;; no tooltips. put them in the minibuffer
 (tooltip-mode -1)
 
 ; y/n
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ; backups
-
 (setq backup-directory-alist `(("." . "~/.emacs.d/.backups")))
